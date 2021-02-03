@@ -1,0 +1,1326 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 22,
+  "iteration": 1612374817920,
+  "links": [],
+  "panels": [
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "mappings": [
+            {
+              "from": "",
+              "id": 1,
+              "text": "UP",
+              "to": "",
+              "type": 1,
+              "value": "1"
+            },
+            {
+              "from": "",
+              "id": 2,
+              "text": "DOWN",
+              "to": "",
+              "type": 1,
+              "value": "2"
+            },
+            {
+              "from": "1",
+              "id": 3,
+              "text": "UP",
+              "to": "1.9",
+              "type": 2
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "dark-green",
+                "value": 1
+              },
+              {
+                "color": "dark-red",
+                "value": 2
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 18,
+        "x": 0,
+        "y": 0
+      },
+      "id": 6,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "7.3.4",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [],
+          "group": {
+            "filter": "OLT"
+          },
+          "host": {
+            "filter": "$OLT"
+          },
+          "item": {
+            "filter": "/Olt link state GPON /"
+          },
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "STATUS",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "ackEventColor": "rgb(56, 219, 156)",
+      "ackField": true,
+      "ageField": false,
+      "customLastChangeFormat": false,
+      "datasource": null,
+      "descriptionAtNewLine": false,
+      "descriptionField": true,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "100%",
+      "gridPos": {
+        "h": 8,
+        "w": 6,
+        "x": 18,
+        "y": 0
+      },
+      "highlightBackground": false,
+      "highlightNewEvents": false,
+      "highlightNewerThan": "1h",
+      "hostField": true,
+      "hostGroups": false,
+      "hostProxy": false,
+      "hostTechNameField": false,
+      "id": 14,
+      "lastChangeFormat": "",
+      "layout": "list",
+      "limit": null,
+      "markAckEvents": false,
+      "okEventColor": "rgb(56, 189, 113)",
+      "pageSize": 10,
+      "pluginVersion": "7.3.4",
+      "problemTimeline": true,
+      "resizedColumns": [],
+      "schemaVersion": 8,
+      "severityField": true,
+      "showTags": true,
+      "sortProblems": "lastchange",
+      "statusField": true,
+      "statusIcon": true,
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [],
+          "group": {
+            "filter": "OLT"
+          },
+          "host": {
+            "filter": "$OLT"
+          },
+          "item": {
+            "filter": ""
+          },
+          "options": {
+            "acknowledged": 2,
+            "hostProxy": false,
+            "hostsInMaintenance": false,
+            "limit": 1001,
+            "minSeverity": 0,
+            "severities": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "sortProblems": "default"
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 5,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "showProblems": "problems",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "ALARMES",
+      "transparent": true,
+      "triggerSeverity": [
+        {
+          "color": "rgb(108, 108, 108)",
+          "priority": 0,
+          "severity": "Not classified",
+          "show": true
+        },
+        {
+          "color": "rgb(120, 158, 183)",
+          "priority": 1,
+          "severity": "Information",
+          "show": true
+        },
+        {
+          "color": "rgb(175, 180, 36)",
+          "priority": 2,
+          "severity": "Warning",
+          "show": true
+        },
+        {
+          "color": "rgb(255, 137, 30)",
+          "priority": 3,
+          "severity": "Average",
+          "show": true
+        },
+        {
+          "color": "rgb(255, 101, 72)",
+          "priority": 4,
+          "severity": "High",
+          "show": true
+        },
+        {
+          "color": "rgb(215, 0, 0)",
+          "priority": 5,
+          "severity": "Disaster",
+          "show": true
+        }
+      ],
+      "type": "alexanderzobnin-zabbix-triggers-panel"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": null,
+            "filterable": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "decbits"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 6,
+        "w": 6,
+        "x": 18,
+        "y": 8
+      },
+      "hiddenSeries": false,
+      "id": 12,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": true,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": true,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.3.4",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [],
+          "group": {
+            "filter": "OLT"
+          },
+          "host": {
+            "filter": "$OLT"
+          },
+          "item": {
+            "filter": "$GPON"
+          },
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "TRAFEGO",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "decbits",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "mappings": [],
+          "max": 124,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "light-orange",
+                "value": 80
+              },
+              {
+                "color": "dark-red",
+                "value": 90
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 16,
+        "w": 6,
+        "x": 0,
+        "y": 12
+      },
+      "id": 2,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true
+      },
+      "pluginVersion": "7.3.4",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [],
+          "group": {
+            "filter": "OLT"
+          },
+          "host": {
+            "filter": "OLT Volta Redonda"
+          },
+          "item": {
+            "filter": "/Qt GPON 0/3/"
+          },
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "GPON 0/3",
+      "type": "bargauge"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "mappings": [],
+          "max": 124,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "light-orange",
+                "value": 80
+              },
+              {
+                "color": "dark-red",
+                "value": 90
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 16,
+        "w": 6,
+        "x": 6,
+        "y": 12
+      },
+      "id": 3,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true
+      },
+      "pluginVersion": "7.3.4",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [],
+          "group": {
+            "filter": "OLT"
+          },
+          "host": {
+            "filter": "OLT Volta Redonda"
+          },
+          "item": {
+            "filter": "/Qt GPON 0/4/"
+          },
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "GPON 0/4",
+      "type": "bargauge"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "mappings": [],
+          "max": 124,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "light-orange",
+                "value": 80
+              },
+              {
+                "color": "dark-red",
+                "value": 90
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 16,
+        "w": 6,
+        "x": 12,
+        "y": 12
+      },
+      "id": 4,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true
+      },
+      "pluginVersion": "7.3.4",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [],
+          "group": {
+            "filter": "OLT"
+          },
+          "host": {
+            "filter": "OLT Volta Redonda"
+          },
+          "item": {
+            "filter": "/Qt GPON 0/5/"
+          },
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "GPON 0/5",
+      "type": "bargauge"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "mappings": [],
+          "max": 70,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 50
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 6,
+        "x": 18,
+        "y": 14
+      },
+      "id": 8,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true
+      },
+      "pluginVersion": "7.3.4",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [],
+          "group": {
+            "filter": "OLT"
+          },
+          "host": {
+            "filter": "OLT Volta Redonda"
+          },
+          "item": {
+            "filter": "/Board /"
+          },
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "TEMPERATURA",
+      "transparent": true,
+      "type": "bargauge"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "light-orange",
+                "value": 50
+              },
+              {
+                "color": "dark-red",
+                "value": 90
+              }
+            ]
+          },
+          "unit": "%"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 6,
+        "x": 18,
+        "y": 22
+      },
+      "id": 10,
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "7.3.4",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [],
+          "group": {
+            "filter": "OLT"
+          },
+          "host": {
+            "filter": "OLT Volta Redonda"
+          },
+          "item": {
+            "filter": "/Olt CPU util board /"
+          },
+          "options": {
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "CPU",
+      "type": "gauge"
+    }
+  ],
+  "schemaVersion": 26,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "allValue": null,
+        "current": {
+          "selected": true,
+          "text": "OLT Volta Redonda",
+          "value": "OLT Volta Redonda"
+        },
+        "datasource": "Zabbix",
+        "definition": "Zabbix - host",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "OLT",
+        "options": [],
+        "query": {
+          "application": "",
+          "group": "OLT",
+          "host": "/.*/",
+          "item": "",
+          "queryType": "host"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "Outgoing traffic on interface GPON 0/3/1",
+          "value": "Outgoing traffic on interface GPON 0/3/1"
+        },
+        "datasource": "Zabbix",
+        "definition": "Zabbix - item",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "GPON",
+        "options": [
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface ethernet0/6/2",
+            "value": "Outgoing traffic on interface ethernet0/6/2"
+          },
+          {
+            "selected": true,
+            "text": "Outgoing traffic on interface GPON 0/3/1",
+            "value": "Outgoing traffic on interface GPON 0/3/1"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/3/0",
+            "value": "Outgoing traffic on interface GPON 0/3/0"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/5/6",
+            "value": "Outgoing traffic on interface GPON 0/5/6"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/5/5",
+            "value": "Outgoing traffic on interface GPON 0/5/5"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/5/4",
+            "value": "Outgoing traffic on interface GPON 0/5/4"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/5/3",
+            "value": "Outgoing traffic on interface GPON 0/5/3"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/5/2",
+            "value": "Outgoing traffic on interface GPON 0/5/2"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/5/1",
+            "value": "Outgoing traffic on interface GPON 0/5/1"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/5/0",
+            "value": "Outgoing traffic on interface GPON 0/5/0"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/4/15",
+            "value": "Outgoing traffic on interface GPON 0/4/15"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/4/14",
+            "value": "Outgoing traffic on interface GPON 0/4/14"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface ethernet0/7/2",
+            "value": "Outgoing traffic on interface ethernet0/7/2"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface ethernet0/7/3",
+            "value": "Outgoing traffic on interface ethernet0/7/3"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface ethernet0/8/0",
+            "value": "Outgoing traffic on interface ethernet0/8/0"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface ethernet0/8/1",
+            "value": "Outgoing traffic on interface ethernet0/8/1"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface ethernet0/9/0",
+            "value": "Outgoing traffic on interface ethernet0/9/0"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/4/13",
+            "value": "Outgoing traffic on interface GPON 0/4/13"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/4/12",
+            "value": "Outgoing traffic on interface GPON 0/4/12"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/4/11",
+            "value": "Outgoing traffic on interface GPON 0/4/11"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/4/10",
+            "value": "Outgoing traffic on interface GPON 0/4/10"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/4/9",
+            "value": "Outgoing traffic on interface GPON 0/4/9"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/4/8",
+            "value": "Outgoing traffic on interface GPON 0/4/8"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/4/7",
+            "value": "Outgoing traffic on interface GPON 0/4/7"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/4/6",
+            "value": "Outgoing traffic on interface GPON 0/4/6"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/4/5",
+            "value": "Outgoing traffic on interface GPON 0/4/5"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/4/4",
+            "value": "Outgoing traffic on interface GPON 0/4/4"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/4/3",
+            "value": "Outgoing traffic on interface GPON 0/4/3"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/4/2",
+            "value": "Outgoing traffic on interface GPON 0/4/2"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/4/1",
+            "value": "Outgoing traffic on interface GPON 0/4/1"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/4/0",
+            "value": "Outgoing traffic on interface GPON 0/4/0"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/3/15",
+            "value": "Outgoing traffic on interface GPON 0/3/15"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/3/14",
+            "value": "Outgoing traffic on interface GPON 0/3/14"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/3/13",
+            "value": "Outgoing traffic on interface GPON 0/3/13"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/3/12",
+            "value": "Outgoing traffic on interface GPON 0/3/12"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/3/11",
+            "value": "Outgoing traffic on interface GPON 0/3/11"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/3/10",
+            "value": "Outgoing traffic on interface GPON 0/3/10"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/3/9",
+            "value": "Outgoing traffic on interface GPON 0/3/9"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/3/8",
+            "value": "Outgoing traffic on interface GPON 0/3/8"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface ethernet0/9/1",
+            "value": "Outgoing traffic on interface ethernet0/9/1"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/3/7",
+            "value": "Outgoing traffic on interface GPON 0/3/7"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/3/6",
+            "value": "Outgoing traffic on interface GPON 0/3/6"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/3/5",
+            "value": "Outgoing traffic on interface GPON 0/3/5"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/3/4",
+            "value": "Outgoing traffic on interface GPON 0/3/4"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/3/3",
+            "value": "Outgoing traffic on interface GPON 0/3/3"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface InLoopBack0",
+            "value": "Outgoing traffic on interface InLoopBack0"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/5/15",
+            "value": "Outgoing traffic on interface GPON 0/5/15"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/5/14",
+            "value": "Outgoing traffic on interface GPON 0/5/14"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface null0",
+            "value": "Outgoing traffic on interface null0"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface meth0",
+            "value": "Outgoing traffic on interface meth0"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface vlanif20",
+            "value": "Outgoing traffic on interface vlanif20"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface vlanif60",
+            "value": "Outgoing traffic on interface vlanif60"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface vlanif80",
+            "value": "Outgoing traffic on interface vlanif80"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface vlanif90",
+            "value": "Outgoing traffic on interface vlanif90"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface vlanif104",
+            "value": "Outgoing traffic on interface vlanif104"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface ethernet0/6/0",
+            "value": "Outgoing traffic on interface ethernet0/6/0"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface ethernet0/6/1",
+            "value": "Outgoing traffic on interface ethernet0/6/1"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/3/2",
+            "value": "Outgoing traffic on interface GPON 0/3/2"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/5/13",
+            "value": "Outgoing traffic on interface GPON 0/5/13"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/5/12",
+            "value": "Outgoing traffic on interface GPON 0/5/12"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/5/11",
+            "value": "Outgoing traffic on interface GPON 0/5/11"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/5/10",
+            "value": "Outgoing traffic on interface GPON 0/5/10"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface ethernet0/6/3",
+            "value": "Outgoing traffic on interface ethernet0/6/3"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface ethernet0/7/0",
+            "value": "Outgoing traffic on interface ethernet0/7/0"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface ethernet0/7/1",
+            "value": "Outgoing traffic on interface ethernet0/7/1"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/5/9",
+            "value": "Outgoing traffic on interface GPON 0/5/9"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/5/8",
+            "value": "Outgoing traffic on interface GPON 0/5/8"
+          },
+          {
+            "selected": false,
+            "text": "Outgoing traffic on interface GPON 0/5/7",
+            "value": "Outgoing traffic on interface GPON 0/5/7"
+          }
+        ],
+        "query": {
+          "application": "",
+          "group": "OLT",
+          "host": "/.*/",
+          "item": "/Out/",
+          "queryType": "item"
+        },
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "GPON",
+  "uid": "rfxk_PLMz",
+  "version": 25
+}
