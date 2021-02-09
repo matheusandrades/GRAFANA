@@ -1,0 +1,1245 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 2,
+  "links": [],
+  "panels": [
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "flowchartsData": {
+        "flowcharts": [
+          {
+            "allowDrawio": false,
+            "bgColor": null,
+            "center": true,
+            "csv": "## See more information for the syntax at https://drawio-app.com/import-from-csv-to-drawio/\n##\n## Example CSV. Use ## for comments and # for configuration.\n## The following names are reserved and should not be used (or ignored):\n## id, tooltip, placeholder(s), link and label (see below)\n##\n#\n## Node label with placeholders and HTML.\n## Default is '%name_of_first_column%'.\n#\n# label: %name%<br><i style=\"color:gray;\">%position%</i><br><a href=\"mailto:%email%\">Email</a>\n#\n## Node style (placeholders are replaced once).\n## Default is the current style for nodes.\n#\n# style: label;image=%image%;whiteSpace=wrap;html=1;rounded=1;fillColor=%fill%;strokeColor=%stroke%;\n#\n## Parent style for nodes with child nodes (placeholders are replaced once).\n#\n# parentstyle: swimlane;whiteSpace=wrap;html=1;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;\n#\n## Optional column name that contains a reference to a named style in styles.\n## Default is the current style for nodes.\n#\n# stylename: -\n#\n## JSON for named styles of the form {\"name\": \"style\", \"name\": \"style\"} where style is a cell style with\n## placeholders that are replaced once.\n#\n# styles: -\n#\n## Optional column name that contains a reference to a named label in labels.\n## Default is the current label.\n#\n# labelname: -\n#\n## JSON for named labels of the form {\"name\": \"label\", \"name\": \"label\"} where label is a cell label with\n## placeholders.\n#\n# labels: -\n#\n## Uses the given column name as the identity for cells (updates existing cells).\n## Default is no identity (empty value or -).\n#\n# identity: -\n#\n## Uses the given column name as the parent reference for cells. Default is no parent (empty or -).\n## The identity above is used for resolving the reference so it must be specified.\n#\n# parent: -\n#\n## Adds a prefix to the identity of cells to make sure they do not collide with existing cells (whose\n## IDs are numbers from 0..n, sometimes with a GUID prefix in the context of realtime collaboration).\n## Default is csvimport-.\n#\n# namespace: csvimport-\n#\n## Connections between rows (\"from\": source colum, \"to\": target column).\n## Label, style and invert are optional. Defaults are '', current style and false.\n## If placeholders are used in the style, they are replaced with data from the source.\n## An optional placeholders can be set to target to use data from the target instead.\n## In addition to label, an optional fromlabel and tolabel can be used to name the column\n## that contains the text for the label in the edges source or target (invert ignored).\n## The label is concatenated in the form fromlabel + label + tolabel if all are defined.\n## The target column may contain a comma-separated list of values.\n## Multiple connect entries are allowed.\n#\n# connect: {\"from\": \"manager\", \"to\": \"name\", \"invert\": true, \"label\": \"manages\", \\\n#          \"style\": \"curved=1;endArrow=blockThin;endFill=1;fontSize=11;\"}\n# connect: {\"from\": \"refs\", \"to\": \"id\", \"style\": \"curved=1;fontSize=11;\"}\n#\n## Node x-coordinate. Possible value is a column name. Default is empty. Layouts will\n## override this value.\n#\n# left: \n#\n## Node y-coordinate. Possible value is a column name. Default is empty. Layouts will\n## override this value.\n#\n# top: \n#\n## Node width. Possible value is a number (in px), auto or an @ sign followed by a column\n## name that contains the value for the width. Default is auto.\n#\n# width: auto\n#\n## Node height. Possible value is a number (in px), auto or an @ sign followed by a column\n## name that contains the value for the height. Default is auto.\n#\n# height: auto\n#\n## Padding for autosize. Default is 0.\n#\n# padding: -12\n#\n## Comma-separated list of ignored columns for metadata. (These can be\n## used for connections and styles but will not be added as metadata.)\n#\n# ignore: id,image,fill,stroke,refs,manager\n#\n## Column to be renamed to link attribute (used as link).\n#\n# link: url\n#\n## Spacing between nodes. Default is 40.\n#\n# nodespacing: 40\n#\n## Spacing between levels of hierarchical layouts. Default is 100.\n#\n# levelspacing: 100\n#\n## Spacing between parallel edges. Default is 40. Use 0 to disable.\n#\n# edgespacing: 40\n#\n## Name or JSON of layout. Possible values are auto, none, verticaltree, horizontaltree,\n## verticalflow, horizontalflow, organic, circle or a JSON string as used in Layout, Apply.\n## Default is auto.\n#\n# layout: auto\n#\n## ---- CSV below this line. First line are column names. ----\nname,position,id,location,manager,email,fill,stroke,refs,url,image\nEvan Miller,CFO,emi,Office 1,,me@example.com,#dae8fc,#6c8ebf,,https://www.draw.io,https://cdn3.iconfinder.com/data/icons/user-avatars-1/512/users-9-2-128.png\nEdward Morrison,Brand Manager,emo,Office 2,Evan Miller,me@example.com,#d5e8d4,#82b366,,https://www.draw.io,https://cdn3.iconfinder.com/data/icons/user-avatars-1/512/users-10-3-128.png\nRon Donovan,System Admin,rdo,Office 3,Evan Miller,me@example.com,#d5e8d4,#82b366,\"emo,tva\",https://www.draw.io,https://cdn3.iconfinder.com/data/icons/user-avatars-1/512/users-2-128.png\nTessa Valet,HR Director,tva,Office 4,Evan Miller,me@example.com,#d5e8d4,#82b366,,https://www.draw.io,https://cdn3.iconfinder.com/data/icons/user-avatars-1/512/users-3-128.png\n",
+            "download": false,
+            "editorTheme": "dark",
+            "editorUrl": "https://www.draw.io",
+            "enableAnim": true,
+            "grid": false,
+            "lock": true,
+            "name": "Main",
+            "scale": true,
+            "tooltip": true,
+            "type": "xml",
+            "url": "http://<YourUrl>/<Your XML/drawio file/api>",
+            "xml": "<mxfile host=\"app.diagrams.net\" modified=\"2021-02-01T17:20:16.499Z\" agent=\"5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36\" etag=\"h-3PB_ToO6qPDPZ09qL_\" version=\"14.2.9\" type=\"embed\"><diagram id=\"YWSEJmfsYvkOykMSQ1hq\" name=\"Page-1\">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</diagram></mxfile>",
+            "zoom": "100%"
+          }
+        ]
+      },
+      "format": "short",
+      "graphId": "flowchart_2",
+      "gridPos": {
+        "h": 16,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "newFlag": false,
+      "pluginVersion": "7.3.4",
+      "rulesData": {
+        "rulesData": [
+          {
+            "aggregation": "current",
+            "alias": "FRRE SPACE STORAGE",
+            "colors": [
+              "#C4162A",
+              "#d96807",
+              "#b26c0a",
+              "#19730E"
+            ],
+            "column": "Time",
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 0,
+            "eventData": [
+              {
+                "eventOn": 1,
+                "hidden": false,
+                "pattern": "137",
+                "style": "blink",
+                "value": "400"
+              }
+            ],
+            "eventProp": "id",
+            "eventRegEx": false,
+            "gradient": true,
+            "hidden": false,
+            "invert": true,
+            "linkData": [],
+            "linkProp": "id",
+            "linkRegEx": true,
+            "mappingType": 1,
+            "metricType": "serie",
+            "order": 1,
+            "overlayIcon": false,
+            "pattern": "FreeSpace Stoarage_rede",
+            "rangeData": [],
+            "reduce": true,
+            "refId": "A",
+            "sanitize": false,
+            "shapeData": [
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "137",
+                "style": "fillColor"
+              }
+            ],
+            "shapeProp": "id",
+            "shapeRegEx": true,
+            "stringThresholds": [],
+            "textData": [
+              {
+                "hidden": false,
+                "pattern": "139",
+                "textOn": "wmd",
+                "textPattern": "/.*/",
+                "textReplace": "anl"
+              }
+            ],
+            "textProp": "id",
+            "textRegEx": true,
+            "thresholds": [
+              63317271296,
+              77957468672,
+              87237863424
+            ],
+            "tooltip": true,
+            "tooltipColors": false,
+            "tooltipLabel": "",
+            "tooltipOn": "a",
+            "tpDirection": "v",
+            "tpGraph": true,
+            "tpGraphHigh": null,
+            "tpGraphLow": null,
+            "tpGraphScale": "linear",
+            "tpGraphSize": "100%",
+            "tpGraphType": "line",
+            "type": "number",
+            "unit": "decbits",
+            "valueData": []
+          },
+          {
+            "aggregation": "current",
+            "alias": "total space",
+            "colors": [
+              "#19730E"
+            ],
+            "column": "Time",
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "eventData": [],
+            "eventProp": "id",
+            "eventRegEx": false,
+            "gradient": false,
+            "hidden": false,
+            "invert": false,
+            "linkData": [],
+            "linkProp": "id",
+            "linkRegEx": true,
+            "mappingType": 1,
+            "metricType": "serie",
+            "order": 2,
+            "overlayIcon": false,
+            "pattern": "TotalSpace Stoarage_rede",
+            "rangeData": [],
+            "reduce": true,
+            "refId": "A",
+            "sanitize": false,
+            "shapeData": [],
+            "shapeProp": "id",
+            "shapeRegEx": true,
+            "stringThresholds": [],
+            "textData": [
+              {
+                "hidden": false,
+                "pattern": "141",
+                "textOn": "wmd",
+                "textPattern": "/.*/",
+                "textReplace": "as"
+              }
+            ],
+            "textProp": "id",
+            "textRegEx": true,
+            "thresholds": [],
+            "tooltip": true,
+            "tooltipColors": false,
+            "tooltipLabel": "",
+            "tooltipOn": "a",
+            "tpDirection": "v",
+            "tpGraph": true,
+            "tpGraphHigh": null,
+            "tpGraphLow": null,
+            "tpGraphScale": "linear",
+            "tpGraphSize": "100%",
+            "tpGraphType": "line",
+            "type": "number",
+            "unit": "decbits",
+            "valueData": []
+          },
+          {
+            "aggregation": "current",
+            "alias": "myRule",
+            "colors": [
+              "rgba(50, 172, 45, 0.97)",
+              "#19730E",
+              "rgba(245, 54, 54, 0.9)"
+            ],
+            "column": "Time",
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 0,
+            "eventData": [
+              {
+                "eventOn": -1,
+                "hidden": false,
+                "pattern": "132",
+                "style": "class_mxEdgeFlow",
+                "value": "400"
+              }
+            ],
+            "eventProp": "id",
+            "eventRegEx": false,
+            "gradient": false,
+            "hidden": false,
+            "invert": true,
+            "linkData": [],
+            "linkProp": "id",
+            "linkRegEx": true,
+            "mappingType": 1,
+            "metricType": "serie",
+            "order": 3,
+            "overlayIcon": false,
+            "pattern": "Disponibilidade icmp",
+            "rangeData": [],
+            "reduce": true,
+            "refId": "A",
+            "sanitize": false,
+            "shapeData": [
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "132",
+                "style": "strokeColor"
+              }
+            ],
+            "shapeProp": "id",
+            "shapeRegEx": true,
+            "stringThresholds": [
+              "/.*/",
+              "/.*/"
+            ],
+            "textData": [],
+            "textProp": "id",
+            "textRegEx": true,
+            "thresholds": [
+              1,
+              2
+            ],
+            "tooltip": false,
+            "tooltipColors": false,
+            "tooltipLabel": "",
+            "tooltipOn": "a",
+            "tpDirection": "v",
+            "tpGraph": false,
+            "tpGraphHigh": null,
+            "tpGraphLow": null,
+            "tpGraphScale": "linear",
+            "tpGraphSize": "100%",
+            "tpGraphType": "line",
+            "type": "number",
+            "unit": "short",
+            "valueData": []
+          },
+          {
+            "aggregation": "current",
+            "alias": "STATUS SERV",
+            "colors": [
+              "rgba(50, 172, 45, 0.97)",
+              "#19730E",
+              "rgba(245, 54, 54, 0.9)"
+            ],
+            "column": "Time",
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 0,
+            "eventData": [
+              {
+                "eventOn": 2,
+                "hidden": false,
+                "pattern": "115",
+                "style": "rotation",
+                "value": "60"
+              },
+              {
+                "eventOn": 2,
+                "hidden": false,
+                "pattern": "115",
+                "style": "blink",
+                "value": "400"
+              },
+              {
+                "eventOn": -1,
+                "hidden": false,
+                "pattern": "130",
+                "style": "class_mxEdgeFlow",
+                "value": "${_value}"
+              },
+              {
+                "eventOn": -1,
+                "hidden": false,
+                "pattern": "152",
+                "style": "class_mxEdgeFlow",
+                "value": "${_value}"
+              },
+              {
+                "eventOn": -1,
+                "hidden": false,
+                "pattern": "131",
+                "style": "class_mxEdgeFlow",
+                "value": "${_value}"
+              },
+              {
+                "eventOn": -1,
+                "hidden": false,
+                "pattern": "151",
+                "style": "class_mxEdgeFlow",
+                "value": "${_value}"
+              },
+              {
+                "eventOn": -1,
+                "hidden": false,
+                "pattern": "135",
+                "style": "class_mxEdgeFlow",
+                "value": "${_value}"
+              },
+              {
+                "eventOn": -1,
+                "hidden": false,
+                "pattern": "136",
+                "style": "class_mxEdgeFlow",
+                "value": "${_value}"
+              },
+              {
+                "eventOn": -1,
+                "hidden": false,
+                "pattern": "129",
+                "style": "class_mxEdgeFlow",
+                "value": "${_value}"
+              },
+              {
+                "eventOn": -1,
+                "hidden": false,
+                "pattern": "127",
+                "style": "class_mxEdgeFlow",
+                "value": "${_value}"
+              },
+              {
+                "eventOn": -1,
+                "hidden": false,
+                "pattern": "128",
+                "style": "class_mxEdgeFlow",
+                "value": "${_value}"
+              },
+              {
+                "eventOn": -1,
+                "hidden": false,
+                "pattern": "143",
+                "style": "class_mxEdgeFlow",
+                "value": "${_value}"
+              },
+              {
+                "eventOn": -1,
+                "hidden": false,
+                "pattern": "145",
+                "style": "class_mxEdgeFlow",
+                "value": "${_value}"
+              }
+            ],
+            "eventProp": "id",
+            "eventRegEx": false,
+            "gradient": false,
+            "hidden": false,
+            "invert": true,
+            "linkData": [],
+            "linkProp": "id",
+            "linkRegEx": true,
+            "mappingType": 1,
+            "metricType": "serie",
+            "order": 4,
+            "overlayIcon": false,
+            "pattern": "Disponibilidade icmp",
+            "rangeData": [],
+            "reduce": true,
+            "refId": "A",
+            "sanitize": false,
+            "shapeData": [
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "115",
+                "style": "fillColor"
+              },
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "130",
+                "style": "strokeColor"
+              },
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "152",
+                "style": "strokeColor"
+              },
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "131",
+                "style": "strokeColor"
+              },
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "151",
+                "style": "strokeColor"
+              },
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "135",
+                "style": "strokeColor"
+              },
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "136",
+                "style": "strokeColor"
+              },
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "129",
+                "style": "strokeColor"
+              },
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "127",
+                "style": "strokeColor"
+              },
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "128",
+                "style": "strokeColor"
+              },
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "143",
+                "style": "strokeColor"
+              },
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "145",
+                "style": "strokeColor"
+              }
+            ],
+            "shapeProp": "id",
+            "shapeRegEx": true,
+            "stringThresholds": [
+              "/.*/",
+              "/.*/"
+            ],
+            "textData": [],
+            "textProp": "id",
+            "textRegEx": true,
+            "thresholds": [
+              1,
+              2
+            ],
+            "tooltip": true,
+            "tooltipColors": true,
+            "tooltipLabel": "",
+            "tooltipOn": "a",
+            "tpDirection": "v",
+            "tpGraph": true,
+            "tpGraphHigh": null,
+            "tpGraphLow": null,
+            "tpGraphScale": "linear",
+            "tpGraphSize": "100%",
+            "tpGraphType": "line",
+            "type": "number",
+            "unit": "short",
+            "valueData": []
+          },
+          {
+            "aggregation": "current",
+            "alias": "UND FITA",
+            "colors": [
+              "rgba(50, 172, 45, 0.97)",
+              "#AD0317",
+              "#19730E"
+            ],
+            "column": "Time",
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 0,
+            "eventData": [
+              {
+                "eventOn": 1,
+                "hidden": false,
+                "pattern": "33",
+                "style": "rotation",
+                "value": "60"
+              }
+            ],
+            "eventProp": "id",
+            "eventRegEx": false,
+            "gradient": false,
+            "hidden": false,
+            "invert": true,
+            "linkData": [],
+            "linkProp": "id",
+            "linkRegEx": true,
+            "mappingType": 1,
+            "metricType": "serie",
+            "order": 5,
+            "overlayIcon": false,
+            "pattern": "Slots HP MSL G3 Series 9.50",
+            "rangeData": [],
+            "reduce": true,
+            "refId": "A",
+            "sanitize": false,
+            "shapeData": [
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "33",
+                "style": "fillColor"
+              }
+            ],
+            "shapeProp": "id",
+            "shapeRegEx": true,
+            "stringThresholds": [
+              "/.*/",
+              "/.*/"
+            ],
+            "textData": [
+              {
+                "hidden": false,
+                "pattern": "33",
+                "textOn": "wmd",
+                "textPattern": "/.*/",
+                "textReplace": "anl"
+              }
+            ],
+            "textProp": "id",
+            "textRegEx": true,
+            "thresholds": [
+              50,
+              90
+            ],
+            "tooltip": true,
+            "tooltipColors": true,
+            "tooltipLabel": "",
+            "tooltipOn": "a",
+            "tpDirection": "v",
+            "tpGraph": true,
+            "tpGraphHigh": null,
+            "tpGraphLow": null,
+            "tpGraphScale": "linear",
+            "tpGraphSize": "100%",
+            "tpGraphType": "line",
+            "type": "number",
+            "unit": "short",
+            "valueData": []
+          },
+          {
+            "aggregation": "current",
+            "alias": "myRule",
+            "colors": [
+              "rgba(50, 172, 45, 0.97)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(245, 54, 54, 0.9)"
+            ],
+            "column": "Time",
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "eventData": [
+              {
+                "eventOn": 2,
+                "hidden": false,
+                "pattern": "153",
+                "style": "blink",
+                "value": "400"
+              }
+            ],
+            "eventProp": "id",
+            "eventRegEx": false,
+            "gradient": false,
+            "hidden": false,
+            "invert": true,
+            "linkData": [],
+            "linkProp": "id",
+            "linkRegEx": true,
+            "mappingType": 1,
+            "metricType": "serie",
+            "order": 6,
+            "overlayIcon": false,
+            "pattern": "Stopped",
+            "rangeData": [],
+            "reduce": true,
+            "refId": "A",
+            "sanitize": false,
+            "shapeData": [
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "153",
+                "style": "fillColor"
+              }
+            ],
+            "shapeProp": "id",
+            "shapeRegEx": true,
+            "stringThresholds": [
+              "/.*/",
+              "/.*/"
+            ],
+            "textData": [
+              {
+                "hidden": false,
+                "pattern": "153",
+                "textOn": "wmd",
+                "textPattern": "/.*/",
+                "textReplace": "content"
+              }
+            ],
+            "textProp": "id",
+            "textRegEx": true,
+            "thresholds": [
+              1,
+              2
+            ],
+            "tooltip": true,
+            "tooltipColors": false,
+            "tooltipLabel": "",
+            "tooltipOn": "a",
+            "tpDirection": "v",
+            "tpGraph": true,
+            "tpGraphHigh": null,
+            "tpGraphLow": null,
+            "tpGraphScale": "linear",
+            "tpGraphSize": "100%",
+            "tpGraphType": "line",
+            "type": "number",
+            "unit": "short",
+            "valueData": []
+          },
+          {
+            "aggregation": "current",
+            "alias": "TOTAL STORAGE LOCAL",
+            "colors": [
+              "#19730E"
+            ],
+            "column": "Time",
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "eventData": [],
+            "eventProp": "id",
+            "eventRegEx": false,
+            "gradient": false,
+            "hidden": false,
+            "invert": false,
+            "linkData": [],
+            "linkProp": "id",
+            "linkRegEx": true,
+            "mappingType": 1,
+            "metricType": "serie",
+            "order": 7,
+            "overlayIcon": false,
+            "pattern": "TotalSpace Storage_local",
+            "rangeData": [],
+            "reduce": true,
+            "refId": "A",
+            "sanitize": false,
+            "shapeData": [
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "144",
+                "style": "fillColor"
+              }
+            ],
+            "shapeProp": "id",
+            "shapeRegEx": true,
+            "stringThresholds": [],
+            "textData": [
+              {
+                "hidden": false,
+                "pattern": "147",
+                "textOn": "wmd",
+                "textPattern": "/.*/",
+                "textReplace": "anl"
+              }
+            ],
+            "textProp": "id",
+            "textRegEx": true,
+            "thresholds": [],
+            "tooltip": true,
+            "tooltipColors": false,
+            "tooltipLabel": "",
+            "tooltipOn": "a",
+            "tpDirection": "v",
+            "tpGraph": true,
+            "tpGraphHigh": null,
+            "tpGraphLow": null,
+            "tpGraphScale": "linear",
+            "tpGraphSize": "100%",
+            "tpGraphType": "line",
+            "type": "number",
+            "unit": "decbits",
+            "valueData": []
+          },
+          {
+            "aggregation": "current",
+            "alias": "FREE SOACE LOCAL",
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "column": "Time",
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "eventData": [],
+            "eventProp": "id",
+            "eventRegEx": false,
+            "gradient": false,
+            "hidden": false,
+            "invert": false,
+            "linkData": [],
+            "linkProp": "id",
+            "linkRegEx": true,
+            "mappingType": 1,
+            "metricType": "serie",
+            "order": 8,
+            "overlayIcon": false,
+            "pattern": "FreeSpace Storage_local",
+            "rangeData": [],
+            "reduce": true,
+            "refId": "A",
+            "sanitize": false,
+            "shapeData": [],
+            "shapeProp": "id",
+            "shapeRegEx": true,
+            "stringThresholds": [
+              "/.*/",
+              "/.*/"
+            ],
+            "textData": [
+              {
+                "hidden": false,
+                "pattern": "148",
+                "textOn": "wmd",
+                "textPattern": "/.*/",
+                "textReplace": "as"
+              }
+            ],
+            "textProp": "id",
+            "textRegEx": true,
+            "thresholds": [
+              50,
+              80
+            ],
+            "tooltip": false,
+            "tooltipColors": false,
+            "tooltipLabel": "",
+            "tooltipOn": "a",
+            "tpDirection": "v",
+            "tpGraph": false,
+            "tpGraphHigh": null,
+            "tpGraphLow": null,
+            "tpGraphScale": "linear",
+            "tpGraphSize": "100%",
+            "tpGraphType": "line",
+            "type": "number",
+            "unit": "decbits",
+            "valueData": []
+          }
+        ]
+      },
+      "targets": [
+        {
+          "application": {
+            "filter": "Informacoes do repositorio Stoarage_rede"
+          },
+          "functions": [],
+          "group": {
+            "filter": "Hosts/homologacao"
+          },
+          "host": {
+            "filter": "WIN-LRFUFHN38EE"
+          },
+          "item": {
+            "filter": "FreeSpace Stoarage_rede"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "Informacoes do repositorio Stoarage_rede"
+          },
+          "functions": [],
+          "group": {
+            "filter": "Hosts/homologacao"
+          },
+          "host": {
+            "filter": "WIN-LRFUFHN38EE"
+          },
+          "item": {
+            "filter": "TotalSpace Stoarage_rede"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "B",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "Informacoes de disponibilidade"
+          },
+          "functions": [],
+          "group": {
+            "filter": "Hosts/homologacao"
+          },
+          "host": {
+            "filter": "WIN-LRFUFHN38EE"
+          },
+          "item": {
+            "filter": "Disponibilidade icmp"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "C",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "Informacoes da unidade de fita HP MSL G3 Series 9.50"
+          },
+          "functions": [],
+          "group": {
+            "filter": "Hosts/homologacao"
+          },
+          "host": {
+            "filter": "WIN-LRFUFHN38EE"
+          },
+          "item": {
+            "filter": "Slots HP MSL G3 Series 9.50"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "D",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [],
+          "group": {
+            "filter": "Hosts/homologacao"
+          },
+          "host": {
+            "filter": "WIN-LRFUFHN38EE"
+          },
+          "item": {
+            "filter": "Stopped"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "E",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "Informacoes do repositorio Storage_local"
+          },
+          "functions": [],
+          "group": {
+            "filter": "Hosts/homologacao"
+          },
+          "host": {
+            "filter": "WIN-LRFUFHN38EE"
+          },
+          "item": {
+            "filter": "/.*/"
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "F",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "Informacoes do repositorio Storage_local"
+          },
+          "functions": [],
+          "group": {
+            "filter": "Hosts/homologacao"
+          },
+          "host": {
+            "filter": "WIN-LRFUFHN38EE"
+          },
+          "item": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 0,
+          "refId": "G",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "transparent": true,
+      "type": "agenty-flowcharting-panel",
+      "valueName": "current",
+      "version": "0.9.0"
+    },
+    {
+      "ackEventColor": "rgb(56, 219, 156)",
+      "ackField": true,
+      "ageField": false,
+      "customLastChangeFormat": false,
+      "datasource": null,
+      "descriptionAtNewLine": false,
+      "descriptionField": true,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "100%",
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 16
+      },
+      "highlightBackground": false,
+      "highlightNewEvents": false,
+      "highlightNewerThan": "1h",
+      "hostField": true,
+      "hostGroups": false,
+      "hostProxy": false,
+      "hostTechNameField": false,
+      "id": 4,
+      "lastChangeFormat": "",
+      "layout": "list",
+      "limit": null,
+      "markAckEvents": false,
+      "okEventColor": "rgb(56, 189, 113)",
+      "pageSize": 10,
+      "pluginVersion": "7.3.4",
+      "problemTimeline": true,
+      "resizedColumns": [],
+      "schemaVersion": 8,
+      "severityField": true,
+      "showTags": true,
+      "sortProblems": "lastchange",
+      "statusField": true,
+      "statusIcon": false,
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "functions": [],
+          "group": {
+            "filter": "Hosts/homologacao"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": ""
+          },
+          "options": {
+            "acknowledged": 2,
+            "disableDataAlignment": false,
+            "hostProxy": false,
+            "hostsInMaintenance": false,
+            "limit": 1001,
+            "minSeverity": 0,
+            "severities": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "sortProblems": "default"
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": 5,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "showProblems": "problems",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "ALERTAS",
+      "triggerSeverity": [
+        {
+          "color": "rgb(108, 108, 108)",
+          "priority": 0,
+          "severity": "Not classified",
+          "show": true
+        },
+        {
+          "color": "rgb(120, 158, 183)",
+          "priority": 1,
+          "severity": "Information",
+          "show": true
+        },
+        {
+          "color": "rgb(175, 180, 36)",
+          "priority": 2,
+          "severity": "Warning",
+          "show": true
+        },
+        {
+          "color": "rgb(255, 137, 30)",
+          "priority": 3,
+          "severity": "Average",
+          "show": true
+        },
+        {
+          "color": "rgb(255, 101, 72)",
+          "priority": 4,
+          "severity": "High",
+          "show": true
+        },
+        {
+          "color": "rgb(215, 0, 0)",
+          "priority": 5,
+          "severity": "Disaster",
+          "show": true
+        }
+      ],
+      "type": "alexanderzobnin-zabbix-triggers-panel"
+    }
+  ],
+  "refresh": "1m",
+  "schemaVersion": 26,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Dashboard veeam backup & replicação",
+  "uid": "guYfJJLMk",
+  "version": 30
+}
