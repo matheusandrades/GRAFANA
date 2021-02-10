@@ -10,7 +10,7 @@
 
 ![PAINEL SERVIDORES](https://github.com/matheusandrades/GRAFANA/blob/main/photo4978972694116673858.jpg)
 
-### Nos Paineis acima estamos fiz alguns exemplos de funçoes disponiveis no plugin flowchating no grafana.
+### Nos Paineis acima  fiz alguns exemplos de funçoes disponiveis no plugin flowchating no grafana, nele conseguimos realizar varias ações apartir de correlacionamentos de elemementos, trabalhando em cima das tresholds.
 
 
 
